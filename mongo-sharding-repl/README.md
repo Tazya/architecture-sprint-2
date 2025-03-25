@@ -1,4 +1,4 @@
-# Задание № 2. pymongo-api sharded mongo
+# Задание № 3. pymongo-api sharded-replicas mongo
 
 ## Как запустить
 
@@ -6,6 +6,12 @@
 
 ```shell
 docker compose up -d
+```
+
+Если при запуске отображается ошибка `Pool overlaps with other one on this address space`, то следуюет удалить network, созданный в предыдущем задании 
+```shell
+docker network ls
+docker network rm mongo-sharding_app-network
 ```
 
 Инициализируем шардированную монгу
